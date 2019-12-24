@@ -60,7 +60,7 @@ def correct_saved_settings():
         logger.debug(country)
         return False
 
-    if is_not_valid_server(recommended_server, 0):  # protocol does not matter
+    if is_not_valid_server(recommended_server, int(protocol)):
         logger.info(LAST_CONNECTED_KEY + " not correct")
         logger.debug(recommended_server)
         return False
